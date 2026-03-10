@@ -1,12 +1,17 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Search, Landmark } from 'lucide-react';
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = () => {
+    const navigate = useNavigate();
     const [store, setStore] = useState('');
     const [bank, setBank] = useState('');
 
     const handleSearch = () => {
-        onSearch({ store, bank });
+        const params = new URLSearchParams();
+        if (store) params.append('store', store);
+        if (bank) params.append('bank', bank);
+        navigate(`/search?${params.toString()}`);
     };
 
     return (
@@ -46,11 +51,11 @@ const SearchBar = ({ onSearch }) => {
 
             <div className="mt-4 flex items-center space-x-2 text-sm">
                 <span className="text-gray-400 font-medium">Popular :</span>
-                <span className="text-gray-600 font-bold hover:text-indigo-600 cursor-pointer transition-colors" onClick={() => { setStore('Aarong'); onSearch({ store: 'Aarong', bank }); }}>Aarong</span>
+                <span className="text-gray-600 font-bold hover:text-indigo-600 cursor-pointer transition-colors" onClick={() => navigate('/search?store=Aarong')}>Aarong</span>
                 <span className="text-gray-400">,</span>
-                <span className="text-gray-600 font-bold hover:text-indigo-600 cursor-pointer transition-colors" onClick={() => { setStore('Daraz'); onSearch({ store: 'Daraz', bank }); }}>Daraz</span>
+                <span className="text-gray-600 font-bold hover:text-indigo-600 cursor-pointer transition-colors" onClick={() => navigate('/search?store=Daraz')}>Daraz</span>
                 <span className="text-gray-400">,</span>
-                <span className="text-gray-600 font-bold hover:text-indigo-600 cursor-pointer transition-colors" onClick={() => { setStore('Dining'); onSearch({ store: 'Dining', bank }); }}>Dining</span>
+                <span className="text-gray-600 font-bold hover:text-indigo-600 cursor-pointer transition-colors" onClick={() => navigate('/search?category=Dining')}>Dining</span>
             </div>
         </div>
     );

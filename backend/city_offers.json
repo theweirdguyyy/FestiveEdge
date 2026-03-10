@@ -1,0 +1,1029 @@
+{
+    "source": "https://www.citybankplc.com/ramadan2026/",
+    "bank": "City Bank PLC",
+    "campaign": "Ramadan Eid Campaign 2026",
+    "campaign_period": "1st Ramadan - Till the Eve of Eid-ul-Fitr, 2026",
+    "scraped_at": "2026-03-10T00:59:46.080Z",
+    "eligible_cards": [
+        "City Bank American Express Platinum Reserve Credit Card",
+        "City Bank American Express Platinum Credit Card",
+        "City Bank American Express Gold Credit Card",
+        "City Bank American Express Blue Credit Card",
+        "City Alo Cards",
+        "CityMaxx Cards",
+        "City Bank All Issued Cards"
+    ],
+    "terms_and_conditions": [
+        "For cashback offers, both primary & supplementary cardmembers are eligible and will be considered as one customer.",
+        "Cashback will be credited at the primary cardmember's account after the campaign period within 30 days.",
+        "City Bank reserves the right to extend or withdraw the offer, or modify or change at any time and without any liability.",
+        "Other terms & conditions may apply on sole discretion of City Bank and the participating partners."
+    ],
+    "categories": {
+        "lifestyle_offers": {
+            "page_url": "https://www.citybankplc.com/ramadan2026/retail.php",
+            "cashback_offers": [
+                {
+                    "merchant": "AARONG",
+                    "offer": "25% CASHBACK UP TO BDT 1500 PER TRANSACTION (Platinum Reserve) | 10% CASHBACK UP TO BDT 500 PER TRANSACTION (Platinum & Gold)",
+                    "min_transaction": "BDT 5,000",
+                    "max_uses": "2 times during campaign",
+                    "eligible_cards": "American Express Platinum Reserve, Platinum, Gold & City Alo Credit Cards",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "BATA",
+                    "offer": "25% CASHBACK UP TO BDT 1500 (Platinum Reserve) | 10% CASHBACK UP TO BDT 500 (Platinum & Gold)",
+                    "min_transaction": "BDT 5,000",
+                    "max_uses": "2 times during campaign",
+                    "eligible_cards": "American Express Platinum Reserve, Platinum, Gold & City Alo Credit Cards",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "APEX",
+                    "offer": "25% CASHBACK UP TO BDT 1500 (Platinum Reserve) | 10% CASHBACK UP TO BDT 500 (Platinum & Gold)",
+                    "min_transaction": "BDT 5,000",
+                    "max_uses": "2 times during campaign",
+                    "eligible_cards": "American Express Platinum Reserve, Platinum, Gold & City Alo Credit Cards",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "YELLOW",
+                    "offer": "25% CASHBACK UP TO BDT 1500 (Platinum Reserve) | 10% CASHBACK UP TO BDT 500 (Platinum & Gold)",
+                    "min_transaction": "BDT 5,000",
+                    "max_uses": "2 times during campaign",
+                    "eligible_cards": "American Express Platinum Reserve, Platinum, Gold & City Alo Credit Cards",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "BLUCHEEZ OUTFITTERS",
+                    "offer": "25% CASHBACK UP TO BDT 1500 (Platinum Reserve) | 10% CASHBACK UP TO BDT 500 (Platinum & Gold)",
+                    "min_transaction": "BDT 5,000",
+                    "max_uses": "2 times during campaign",
+                    "eligible_cards": "American Express Platinum Reserve, Platinum, Gold & City Alo Credit Cards",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "BAY EMPORIUM",
+                    "offer": "10% CASHBACK UP TO BDT 1,000 PER CARDHOLDER",
+                    "min_transaction": "BDT 2,500",
+                    "eligible_cards": "City Bank American Express Credit Cards",
+                    "category": "Cashback"
+                }
+            ],
+            "lifestyle_savings": [
+                {
+                    "merchant": "ARTISAN OUTFITTERS LTD.",
+                    "offer": "20% SAVINGS ON ALL PRODUCTS",
+                    "eligible_cards": "Amex Cards and City Alo Cards",
+                    "validity": "Till Eve of Eid-ul-Fitr, 2026",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "ASTORION LIMITED",
+                    "offer": "10% SAVINGS ON CLOTHES ONLY",
+                    "eligible_cards": "Amex Cards and City Alo Cards",
+                    "validity": "Till Eve of Eid-ul-Fitr, 2026",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "BISHWO RANG",
+                    "offer": "10% SAVINGS ON ALL PRODUCTS",
+                    "eligible_cards": "American Express Cards",
+                    "validity": "Till Eve of Eid-ul-Fitr, 2026",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "GENTLE PARK",
+                    "offer": "10% SAVINGS ON ALL PRODUCTS",
+                    "eligible_cards": "Amex Cards and City Alo Cards",
+                    "validity": "Till Eve of Eid-ul-Fitr, 2026",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "GIORDANO",
+                    "offer": "20% SAVINGS ON RMG",
+                    "eligible_cards": "American Express Cards",
+                    "validity": "Till Eve of Eid-ul-Fitr, 2026",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "KAY KRAFT",
+                    "offer": "10% SAVINGS ON ALL PRODUCTS (Min. BDT 5,000)",
+                    "eligible_cards": "Amex Cards and City Alo Cards",
+                    "validity": "Till Eve of Eid-ul-Fitr, 2026",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "LEND",
+                    "offer": "10% SAVINGS ON CLOTHES ONLY",
+                    "eligible_cards": "Amex Cards and City Alo Cards",
+                    "validity": "Till Eve of Eid-ul-Fitr, 2026",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "RICHMAN",
+                    "offer": "10% SAVINGS ON RMG ONLY",
+                    "eligible_cards": "Amex Cards and City Alo Cards",
+                    "validity": "Till Eve of Eid-ul-Fitr, 2026",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "LUBNAN",
+                    "offer": "10% SAVINGS ON RMG PRODUCTS ONLY",
+                    "eligible_cards": "Amex Cards and City Alo Cards",
+                    "validity": "Till Eve of Eid-ul-Fitr, 2026",
+                    "category": "Discount"
+                }
+            ]
+        },
+        "online_shopping": {
+            "page_url": "https://www.citybankplc.com/ramadan2026/online-shopping.php",
+            "retail": [
+                {
+                    "merchant": "APEX",
+                    "url": "https://apex4u.com",
+                    "offer": "25% CASHBACK UP TO BDT 1500 (Platinum Reserve) | 10% CASHBACK UP TO BDT 500 (Platinum & Gold)",
+                    "min_transaction": "BDT 5,000",
+                    "max_uses": "First 2 transactions",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "AARONG",
+                    "url": "https://www.aarong.com/",
+                    "offer": "25% SAVINGS \u2014 10% savings + additional 15% cashback for Platinum Reserve. 10% savings for Platinum & Gold",
+                    "min_transaction": "BDT 5,000",
+                    "max_uses": "First 2 transactions",
+                    "category": "Cashback/Discount"
+                },
+                {
+                    "merchant": "BATA",
+                    "url": "https://www.batabd.com/",
+                    "offer": "25% SAVINGS \u2014 10% savings + additional 15% cashback for Platinum Reserve. 10% savings for Platinum & Gold",
+                    "min_transaction": "BDT 5,000",
+                    "max_uses": "First 2 transactions",
+                    "category": "Cashback/Discount"
+                },
+                {
+                    "merchant": "LUBNAN",
+                    "url": "https://lubnanbd.com/",
+                    "offer": "10% SAVINGS PER TRANSACTION",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "RICHMAN",
+                    "url": "https://richmanbd.com/",
+                    "offer": "10% SAVINGS PER TRANSACTION",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "BLUCHEEZ",
+                    "url": "https://blucheez.fashion/",
+                    "offer": "25% SAVINGS \u2014 10% + additional 15% cashback for Platinum Reserve",
+                    "min_transaction": "BDT 5,000",
+                    "max_uses": "First 2 transactions",
+                    "category": "Cashback/Discount"
+                },
+                {
+                    "merchant": "BENIBOONON",
+                    "url": "https://beniboonon.com/",
+                    "offer": "10% SAVINGS",
+                    "min_transaction": "BDT 1,500",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "THE MALL BD",
+                    "url": "https://themallbd.com/",
+                    "offer": "10% SAVINGS",
+                    "min_transaction": "BDT 3,000",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "GOOTIPA",
+                    "url": "https://gootipa.com/",
+                    "offer": "5% SAVINGS UP TO BDT 500",
+                    "min_transaction": "BDT 3,000",
+                    "max_uses": "First 2 transactions",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "BEAUTY BOOTH",
+                    "url": "https://beautybooth.com.bd/",
+                    "offer": "BDT 200 SAVINGS",
+                    "min_transaction": "BDT 3,500",
+                    "max_uses": "First 2 transactions",
+                    "category": "Fixed Savings"
+                },
+                {
+                    "merchant": "BIO-XIN COSMECEUTICALS",
+                    "url": "https://www.bioxin.com/",
+                    "offer": "10% SAVINGS ON ALL WEBSITE PURCHASES",
+                    "promo_code": "BX10CITY",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "DHEO",
+                    "url": "https://dheo.com",
+                    "offer": "5% SAVINGS PER TRANSACTION",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "BESHI DESHI LTD",
+                    "url": "http://www.beshideshi.com/",
+                    "offer": "10% SAVINGS PER TRANSACTION",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "DOCTIME",
+                    "url": "https://link.doctime.com.bd/app",
+                    "offer": "15% SAVINGS UP TO BDT 180",
+                    "max_uses": "First 5 transactions",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "DIAMU",
+                    "url": "https://diamu.com.bd/",
+                    "offer": "10% SAVINGS UP TO BDT 500",
+                    "min_transaction": "BDT 200",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "SHOPPING CORNER",
+                    "url": "http://www.shoppingcorner.com.bd/",
+                    "offer": "20% SAVINGS UP TO BDT 1000",
+                    "min_transaction": "BDT 1,000",
+                    "max_uses": "First 1 transaction",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "GIFTKOI",
+                    "url": "http://giftkoi.com/",
+                    "offer": "20% SAVINGS UP TO BDT 1000",
+                    "min_transaction": "BDT 1,000",
+                    "max_uses": "First 1 transaction",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "UJALA POINT",
+                    "url": "http://ujalapoint.com/",
+                    "offer": "10% SAVINGS UP TO BDT 300",
+                    "min_transaction": "BDT 3,000",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "UJALA GALLERY",
+                    "url": "http://ujalagallery.com",
+                    "offer": "20% SAVINGS UP TO BDT 600",
+                    "min_transaction": "BDT 1,000",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "LEATHERDOT BANGLADESH",
+                    "url": "http://leatherdotbd.com",
+                    "offer": "10% SAVINGS UP TO BDT 500",
+                    "min_transaction": "BDT 2,500",
+                    "max_uses": "First 10 transactions",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "FOUR STAR IT",
+                    "url": "http://fourstarit.com.bd",
+                    "offer": "10% SAVINGS UP TO BDT 1000",
+                    "min_transaction": "BDT 500",
+                    "max_uses": "First 10 transactions",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "ALFLIP.COM",
+                    "url": "http://alflip.com",
+                    "offer": "10% SAVINGS UP TO BDT 200",
+                    "min_transaction": "BDT 4,000",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "SAMIRAHAN",
+                    "url": "http://samirahan.com",
+                    "offer": "10% SAVINGS",
+                    "min_transaction": "BDT 500",
+                    "max_uses": "First 2 transactions",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "UTKRISTO",
+                    "url": "http://utkristo.com",
+                    "offer": "10% SAVINGS",
+                    "min_transaction": "BDT 500",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "DHAKA BOOKS",
+                    "url": "http://www.dhakabooks.com",
+                    "offer": "10% SAVINGS UP TO BDT 1000",
+                    "min_transaction": "BDT 600",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "AYSHAMART",
+                    "url": "http://ayshamart.com",
+                    "offer": "10% SAVINGS UP TO BDT 500",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "LUXOTIX EYEWEAR",
+                    "url": "http://www.luxotix.com",
+                    "offer": "15% SAVINGS UP TO BDT 2000",
+                    "min_transaction": "BDT 1,500",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "FOOTMAXBD",
+                    "url": "http://footmax.com.bd",
+                    "offer": "10% SAVINGS UP TO BDT 500",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "THE PUNCH COMPANY",
+                    "url": "http://thepunchcompany.com",
+                    "offer": "12% SAVINGS",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "KAY KRAFT",
+                    "url": "https://www.kaykraft.com/",
+                    "offer": "10% SAVINGS",
+                    "min_transaction": "BDT 5,000",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "BAY EMPORIUM LTD",
+                    "url": "https://amarbay.com/",
+                    "offer": "10% SAVINGS UP TO BDT 1000",
+                    "min_transaction": "BDT 2,500",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "VIBRANT",
+                    "url": "https://www.vibrantbd.com/",
+                    "offer": "10% SAVINGS",
+                    "eligible_cards": "City Bank All Cards",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "LA MODE",
+                    "url": "https://lamodebd.com/",
+                    "offer": "10% SAVINGS UP TO BDT 1000",
+                    "min_transaction": "BDT 1,000",
+                    "max_uses": "First 1 transaction",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "CARTUP",
+                    "url": "https://cartup.com/",
+                    "offer": "15% SAVINGS UP TO BDT 500",
+                    "min_transaction": "BDT 1,000",
+                    "validity": "22 Feb\u20139 Mar 2026",
+                    "max_uses": "First 3 transactions",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "SHAJGOJ",
+                    "url": "https://shop.shajgoj.com/",
+                    "offer": "UP TO 73% SAVINGS ON SELECTED PRODUCTS + BUY 1 GET 1 + COMBO OFFERS",
+                    "eligible_cards": "City Bank All Issued Cards",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "TURAAG ACTIVE",
+                    "url": "https://turaag.com/",
+                    "offer": "BDT 300 SAVINGS",
+                    "min_transaction": "BDT 2,000",
+                    "validity": "26 Feb\u2013Eve of Eid 2026",
+                    "eligible_cards": "City Bank All Issued Cards",
+                    "category": "Fixed Savings"
+                },
+                {
+                    "merchant": "CALLING BELL",
+                    "url": "https://callingbell.com.bd/",
+                    "offer": "15% SAVINGS UP TO BDT 500",
+                    "min_transaction": "BDT 1,000",
+                    "max_uses": "First 2 transactions",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "NEERAMOY",
+                    "url": "https://neeramoy.com/",
+                    "offer": "10% SAVINGS UP TO BDT 45",
+                    "min_transaction": "BDT 450",
+                    "max_uses": "First 10 transactions",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "CRAFTS MAN FASHION",
+                    "url": "https://craftsmanfashion.com/",
+                    "offer": "10% SAVINGS",
+                    "min_transaction": "BDT 500",
+                    "max_uses": "First 5 transactions",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "CUBE NATION SHOP",
+                    "url": "https://www.cubenationshop.com/",
+                    "offer": "10% SAVINGS UP TO BDT 500",
+                    "min_transaction": "BDT 5,000",
+                    "max_uses": "First 2 transactions",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "ZEIT WATCH",
+                    "url": "https://myzeitwatch.com/",
+                    "offer": "10% SAVINGS",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "ROMONI",
+                    "url": "https://romoni.com.bd/",
+                    "offer": "15% SAVINGS",
+                    "min_transaction": "BDT 1,500",
+                    "eligible_cards": "City Bank All Issued Cards",
+                    "category": "Discount"
+                }
+            ],
+            "electronics": [
+                {
+                    "merchant": "PICKABOO",
+                    "url": "https://www.pickaboo.com/",
+                    "offer": "BDT 500 SAVINGS ON SELECTED ELECTRONICS",
+                    "promo_code": "AMEX500EL",
+                    "min_transaction": "BDT 15,000",
+                    "max_uses": "First 2 transactions",
+                    "category": "Fixed Savings"
+                },
+                {
+                    "merchant": "ROBI SHOP",
+                    "url": "https://robishop.com.bd/",
+                    "offer": "UP TO 65% SAVINGS ON SELECTED PRODUCTS",
+                    "eligible_cards": "City Bank All Issued Cards",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "DARAZ",
+                    "url": "https://www.daraz.com.bd/",
+                    "offer": "10% SAVINGS UP TO BDT 750",
+                    "min_transaction": "BDT 2,500",
+                    "validity": "26 Feb\u201318 Mar 2026",
+                    "max_uses": "First 2 transactions",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "OTHOBA",
+                    "url": "https://othoba.com",
+                    "offer": "15% SAVINGS UP TO BDT 500",
+                    "min_transaction": "BDT 3,000",
+                    "max_uses": "First 2 transactions",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "ELECTRONICS BANGLADESH (Hitachi)",
+                    "url": "https://bit.ly/hitachirwm",
+                    "offer": "BDT 1,000 ADDITIONAL SAVINGS ON HITACHI REFRIGERATORS & WASHING MACHINES",
+                    "promo_code": "CITYEB1000",
+                    "validity": "1 Mar\u201319 Mar 2026",
+                    "max_uses": "First 2 transactions",
+                    "eligible_cards": "City Bank All Issued Cards",
+                    "category": "Fixed Savings"
+                }
+            ],
+            "ott": [
+                {
+                    "merchant": "CHORKI.COM",
+                    "url": "https://www.chorki.com/",
+                    "offer": "50% SAVINGS ON ALL SUBSCRIPTION PLANS",
+                    "validity": "1 Mar 2026\u2013Eve of Eid-ul-Fitr",
+                    "max_uses": "First 1 transaction",
+                    "eligible_cards": "American Express Platinum Reserve, Platinum & Gold",
+                    "category": "Discount"
+                }
+            ]
+        },
+        "dining_offers": {
+            "page_url": "https://www.citybankplc.com/ramadan2026/dining.php",
+            "special_dining": [
+                {
+                    "merchant": "BURGER KING",
+                    "offer": "Special Ramadan Grilled Deal (Save BDT 187) | 10% savings weekends min BDT 1500 | 15% savings weekdays 2:30pm\u20135:30pm",
+                    "eligible_cards": "Amex Cards and City Alo Cards",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "PEYALA",
+                    "offer": "BUY 1 GET 1 Complimentary Companion Iftar Platter (Fri & Sat)",
+                    "max_uses": "Once per visit",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum & Gold",
+                    "category": "BOGO"
+                },
+                {
+                    "merchant": "TERRACOTTA TALES",
+                    "offer": "10% CASHBACK UP TO BDT 500 (Fri & Sat only)",
+                    "min_transaction": "BDT 5,000",
+                    "max_uses": "2 times per card",
+                    "eligible_cards": "American Express Credit Cards",
+                    "address": "210/B, Tejgaon, Beside Aarong, Gulshan Link Road",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "HONGBAO",
+                    "offer": "20% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "65 Gulshan Avenue, Gulshan, Dhaka",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "MANZO",
+                    "offer": "25% SAVINGS (Platinum Reserve) | 20% SAVINGS (Platinum)",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "Unit B-3, 2nd Floor, 114 Gulshan Avenue",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "TUDO",
+                    "offer": "25% SAVINGS (Platinum Reserve) | 20% SAVINGS (Platinum)",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "Ground Floor & 1st Floor, House 59, Road 7, Block F, Banani",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "LUCKNOW",
+                    "offer": "20% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "House 35, Road 18, Block B, Banani",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "PATURI",
+                    "offer": "20% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "House 38, Road 11, Block G, Banani",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "KONAMI",
+                    "offer": "10% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "Plot 58/B, 3rd Floor, Road 131, Gulshan-1",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "GOONG THE CASTLE",
+                    "offer": "10% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "Building 12/B, Road 50, Gulshan-2",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "CHINA GARDEN",
+                    "offer": "10% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "House CEN(D)14, Road 101, Gulshan-2",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "KIRIKO",
+                    "offer": "15% SAVINGS (Fri & Sat only)",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "Anabil Tower, Kamal Ataturk Avenue, Gulshan-2",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "FISH N GRILL",
+                    "offer": "20% SAVINGS ON A LA CARTE MENU",
+                    "eligible_cards": "Amex Platinum & Platinum Reserve",
+                    "address": "Plot 175A, Road 61, Gulshan Model Town, 2nd Floor",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "YUMI",
+                    "offer": "25% SAVINGS (Platinum Reserve) | 10% SAVINGS (Platinum)",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "45 Kemal Ataturk Avenue, Banani",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "FAVOLA",
+                    "offer": "25% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "Plot 79/A, Airport Road, Nikunjo-2, Khilkhet",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "PREGO",
+                    "offer": "15% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "CWN(B), Plot 1, Road 45, Gulshan-2",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "AMBER ROOM",
+                    "offer": "25% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "1 Minto Road, Ramna",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "IZUMI",
+                    "offer": "25% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "House 24/3, Road 119, Gulshan-2",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "ORO",
+                    "offer": "25% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "Plot CWS(A), 6/A, Gulshan C/A",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "HOLEY",
+                    "offer": "25% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "153/A Gulshan Avenue, Gulshan-2",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "LAAM",
+                    "offer": "25% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "House 22/A, Road 103, Gulshan-2",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "SAINTS CAFEX",
+                    "offer": "15% SAVINGS (Platinum Reserve, min BDT 3000, max BDT 500) | 10% SAVINGS (Platinum)",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "Bulbul Centre, 486/B O.R. Nizam Road, Chattogram",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "EPI",
+                    "offer": "20% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve & Platinum",
+                    "address": "Rangs Z Square, 19th Floor, 118 Gulshan Avenue, Gulshan-2",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "AL AMAR",
+                    "offer": "10% SAVINGS MIN BDT 2000 (Weekends only)",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "GALITOS",
+                    "offer": "10% SAVINGS MIN BDT 2000 (Weekends only)",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "JIVE JOL",
+                    "offer": "15% CASHBACK UP TO BDT 500",
+                    "max_uses": "2 times per card",
+                    "eligible_cards": "American Express Credit Cards",
+                    "address": "Joleshwari Tola, Bogura",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "RUYI BARBECUE",
+                    "offer": "20% SAVINGS ON ALL FOOD",
+                    "eligible_cards": "Amex Platinum Reserve",
+                    "address": "Plot 80, 6th Floor, Gulshan Avenue",
+                    "category": "Discount"
+                }
+            ],
+            "highway_restaurant_cashback": [
+                {
+                    "merchant": "GRAND MASHAWI RESTAURANT",
+                    "offer": "10% CASHBACK UP TO BDT 250",
+                    "min_transaction": "BDT 2,000",
+                    "max_uses": "2 times per card",
+                    "validity": "From 20th Ramadan to Eid Day",
+                    "address": "Thana Rastar Matha, Lohagara, Chattogram",
+                    "eligible_cards": "Amex Credit Cards",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "JANNAT",
+                    "offer": "10% CASHBACK UP TO BDT 250",
+                    "min_transaction": "BDT 2,000",
+                    "max_uses": "2 times per card",
+                    "validity": "From 20th Ramadan to Eid Day",
+                    "address": "Holding 820/01, Laxmipur, Bhairob, Kishoreganj",
+                    "eligible_cards": "Amex Credit Cards",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "SAMPAN HIGHWAY INN",
+                    "offer": "10% CASHBACK UP TO BDT 250",
+                    "min_transaction": "BDT 2,000",
+                    "max_uses": "2 times per card",
+                    "validity": "From 20th Ramadan to Eid Day",
+                    "address": "Hironna Kandi, Kashiani, Gopalganj",
+                    "eligible_cards": "Amex Credit Cards",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "MAYAMI RESORT",
+                    "offer": "10% CASHBACK UP TO BDT 250",
+                    "min_transaction": "BDT 2,000",
+                    "max_uses": "2 times per card",
+                    "validity": "From 20th Ramadan to Eid Day",
+                    "address": "Sankarpur, Beside Eye Hospital, Sadar, Cumilla",
+                    "eligible_cards": "Amex Credit Cards",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "FOOD CITY INN HIGHWAY HOTEL",
+                    "offer": "10% CASHBACK UP TO BDT 250",
+                    "min_transaction": "BDT 2,000",
+                    "max_uses": "2 times per card",
+                    "validity": "From 20th Ramadan to Eid Day",
+                    "address": "Hatikumrul, Ulla Para, Sirajganj",
+                    "eligible_cards": "Amex Credit Cards",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "LA MESA RESTAURANT",
+                    "offer": "10% CASHBACK UP TO BDT 250",
+                    "min_transaction": "BDT 2,000",
+                    "max_uses": "2 times per card",
+                    "validity": "From 20th Ramadan to Eid Day",
+                    "address": "Chunoti, Khan Dighi, Lohagara, Chattogram",
+                    "eligible_cards": "Amex Credit Cards",
+                    "category": "Cashback"
+                }
+            ],
+            "online_food_delivery": [
+                {
+                    "merchant": "FOODPANDA",
+                    "url": "https://www.foodpanda.com.bd/",
+                    "offer": "15% SAVINGS UP TO BDT 150",
+                    "promo_code": "CITY150 (Amex) | CITYMAXX150 (CityMaxx)",
+                    "min_transaction": "BDT 799",
+                    "max_uses": "First 2 transactions (1 for CityMaxx)",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold, Blue & CityMaxx",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "FOODI",
+                    "url": "https://foodibd.com/",
+                    "offer": "15% SAVINGS UP TO BDT 150",
+                    "promo_code": "CITY150",
+                    "min_transaction": "BDT 599",
+                    "max_uses": "First 2 transactions",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold & Blue",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "KFC",
+                    "url": "https://kfcbd.com/",
+                    "offer": "BDT 150 CASHBACK",
+                    "min_transaction": "BDT 799",
+                    "max_uses": "First 2 transactions",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold & Blue",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "PIZZA HUT",
+                    "url": "https://www.pizzahutbd.com/",
+                    "offer": "BDT 150 CASHBACK",
+                    "min_transaction": "BDT 799",
+                    "max_uses": "First 2 transactions",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold & Blue",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "DOMINO'S",
+                    "url": "https://m.dominos.com.bd/",
+                    "offer": "BDT 150 SAVINGS",
+                    "min_transaction": "BDT 799",
+                    "max_uses": "First 2 transactions",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold & Blue",
+                    "category": "Discount"
+                }
+            ],
+            "reward_points": [
+                {
+                    "merchant": "KFC",
+                    "offer": "3X REWARD POINTS ON OFFLINE DINING (Weekends)",
+                    "min_transaction": "BDT 2,000",
+                    "eligible_cards": "Amex All Cards",
+                    "category": "Reward Points"
+                }
+            ]
+        },
+        "grocery_offers": {
+            "page_url": "https://www.citybankplc.com/ramadan2026/groceries.php",
+            "online_groceries": [
+                {
+                    "merchant": "CHALDAL",
+                    "url": "https://chaldal.com/",
+                    "offer": "BDT 250 SAVINGS",
+                    "min_transaction": "BDT 2,500",
+                    "max_uses": "2 times per card",
+                    "validity": "11 Feb\u2013Eve of Eid 2026",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold & Blue",
+                    "category": "Fixed Savings"
+                },
+                {
+                    "merchant": "SHWAPNO",
+                    "url": "https://www.shwapno.com/",
+                    "offer": "BDT 250 CASHBACK",
+                    "min_transaction": "BDT 2,000",
+                    "max_uses": "2 times per card",
+                    "validity": "11 Feb\u2013Eve of Eid 2026",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold & Blue",
+                    "category": "Cashback"
+                },
+                {
+                    "merchant": "MEENA BAZAR",
+                    "url": "https://meenabazaronline.com/",
+                    "offer": "BDT 250 SAVINGS",
+                    "min_transaction": "BDT 2,000",
+                    "max_uses": "2 times per card",
+                    "validity": "11 Feb\u2013Eve of Eid 2026",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold & Blue",
+                    "category": "Fixed Savings"
+                },
+                {
+                    "merchant": "UNIMART",
+                    "url": "https://www.unimart.online/",
+                    "offer": "BDT 250 SAVINGS",
+                    "min_transaction": "BDT 2,000",
+                    "max_uses": "2 times per card",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold & Blue",
+                    "category": "Fixed Savings"
+                },
+                {
+                    "merchant": "KHAAS FOOD",
+                    "url": "https://www.khaasfood.com/",
+                    "offer": "5% SAVINGS",
+                    "promo_code": "KFXCITY",
+                    "min_transaction": "BDT 1,000",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold & Blue",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "GHORER BAZAR",
+                    "url": "https://ghorerbazar.com/",
+                    "offer": "5% SAVINGS ON ALL ITEMS",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold & Blue",
+                    "category": "Discount"
+                }
+            ],
+            "reward_points_offers": {
+                "description": "5X REWARD POINTS ON OFFLINE GROCERY PURCHASE",
+                "validity": "14 Feb\u201319 Feb 2026",
+                "min_transaction": "BDT 3,000",
+                "max_points": "1,500 MR points per campaign",
+                "eligible_cards": "Amex All Credit Cards (except Agora Card)",
+                "merchants": [
+                    "SHWAPNO",
+                    "MEENA BAZAR",
+                    "AMANA BIG BAZAR",
+                    "DAILY SHOPPING",
+                    "WHOLESALE CLUB",
+                    "APON FAMILY MART",
+                    "THE BASKET",
+                    "SAFE N SAVE",
+                    "TOUCH AND TAKE",
+                    "FIZA"
+                ]
+            }
+        },
+        "travel_offers": {
+            "page_url": "https://www.citybankplc.com/ramadan2026/travel.php",
+            "airlines": [
+                {
+                    "merchant": "EMIRATES AIRLINES",
+                    "url": "https://www.emirates.com/bd/english/book/?promoCode=BDCIB26",
+                    "offer": "10% SAVINGS ON BASE FARE (online) + 7% additional cashback (Platinum Reserve) or 5% (Platinum/Gold)",
+                    "promo_code": "BDCIB26",
+                    "routes": "USA, Canada, Europe, Africa (one-way & return) | Jeddah, Medina, Dubai (return only)",
+                    "travel_deadline": "31 July 2026",
+                    "eligible_cards": "Amex Cards",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "AIRASTRA",
+                    "url": "https://airastra.com/",
+                    "offer": "15% SAVINGS ON BASE FARE (Platinum) | 10% SAVINGS (all Amex) at outlets | 12% online",
+                    "promo_code": "AIRASTRA12",
+                    "eligible_cards": "Amex Cards",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "US BANGLA AIRLINES",
+                    "url": "https://usbair.com/",
+                    "offer": "10% SAVINGS ON BASE FARE",
+                    "promo_code_international": "USBAIN10",
+                    "promo_code_domestic": "USBA10",
+                    "eligible_cards": "Amex Cards",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "NOVOAIR",
+                    "url": "https://www.flynovoair.com/",
+                    "offer": "10% SAVINGS ON BASE FARE (online & app)",
+                    "promo_code": "VQCBW",
+                    "eligible_cards": "Amex Cards",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "BIMAN BANGLADESH AIRLINES",
+                    "url": "https://biman-airlines.com/",
+                    "offer": "10% SAVINGS AT SALES OUTLETS | 7% SAVINGS ONLINE",
+                    "promo_code": "BGWEB2026",
+                    "eligible_cards": "Amex Cards",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "GREEN LINE PARIBAHAN",
+                    "url": "https://greenlinebd.com/",
+                    "offer": "10% CASHBACK UP TO BDT 200 (at bus counter only)",
+                    "eligible_cards": "City Bank Amex Blue Credit Card",
+                    "category": "Cashback"
+                }
+            ],
+            "ota_platforms": [
+                {
+                    "merchant": "GOZAYAAN",
+                    "url": "https://gozayaan.com/campaign/id/644",
+                    "offer": "UP TO 18% SAVINGS (Platinum Reserve & Platinum, max BDT 30,000) | UP TO 15% SAVINGS (Gold, max BDT 25,000)",
+                    "max_transactions": "5 per month, 15 per year",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum & Gold",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "SHARETRIP",
+                    "url": "https://sharetrip.net/",
+                    "offer": "FLIGHT: UP TO 10% DISCOUNT | HOTELS: UP TO 70% DISCOUNT on domestic hotels",
+                    "promo_code_domestic": "FLYINSIDE",
+                    "promo_code_international": "FLIGHTINT",
+                    "promo_code_hotel": "CHECKIN",
+                    "validity": "5 Feb\u201328 Feb 2026 (flight) | 1 Mar\u201330 Apr 2026 (hotel)",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum & Gold",
+                    "category": "Discount"
+                },
+                {
+                    "merchant": "BD TICKETS",
+                    "url": "https://bdtickets.com/",
+                    "offer": "BDT 200 SAVINGS",
+                    "promo_code": "BDCB200",
+                    "min_transaction": "BDT 1,500",
+                    "max_uses": "First 2 transactions",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold & Blue",
+                    "category": "Fixed Savings"
+                },
+                {
+                    "merchant": "SHOHOZ",
+                    "url": "https://www.shohoz.com/",
+                    "offer": "BDT 200 CASHBACK ON BUS TICKETS",
+                    "min_transaction": "BDT 1,500",
+                    "validity": "1st Ramadan\u201315th Ramadan 2026",
+                    "max_uses": "First 2 transactions",
+                    "eligible_cards": "Amex Platinum Reserve, Platinum, Gold & Blue",
+                    "category": "Cashback"
+                }
+            ],
+            "hotel_reward_points": {
+                "description": "3X REWARD POINTS ON OFFLINE HOTEL & RESORT BOOKING",
+                "validity": "10 Days after Eid-ul-Fitr",
+                "eligible_cards": "Amex All Cards",
+                "merchants": [
+                    "SEAGULL HOTEL (Cox's Bazar)",
+                    "DUSAI RESORT AND SPA",
+                    "SEA PEARL BEACH RESORT & SPA",
+                    "SAYEMAN BEACH RESORT",
+                    "THE PALACE LUXURY RESORT",
+                    "OCEAN PARADISE HOTEL & RESORT",
+                    "BHAWAL",
+                    "SARAH RESORT",
+                    "GRAND SULTAN",
+                    "BAYWATCH",
+                    "GRAND SYLHET",
+                    "MOMO INN"
+                ]
+            },
+            "airline_reward_points": {
+                "description": "3X REWARD POINTS ON OFFLINE & ONLINE AIRLINE TICKET PURCHASE",
+                "min_transaction": "BDT 5,000",
+                "eligible_cards": "Amex All Cards",
+                "merchants": [
+                    "US BANGLA AIRLINES LTD",
+                    "AIRASTRA",
+                    "BIMAN BANGLADESH AIRLINES",
+                    "NOVOAIR LIMITED"
+                ]
+            }
+        }
+    },
+    "total_offers": 144
+}

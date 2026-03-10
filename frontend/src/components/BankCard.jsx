@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ChevronRight, Landmark, Zap, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const BankCard = ({ bank, isBestOffer }) => {
+const BankCard = ({ bank, isBestOffer, onClick }) => {
+    const navigate = useNavigate();
     // For general listing, the 'bank' object might actually be an 'offer' object if we fetch from /api/offers
     const bankDetails = bank.bank_id || bank;
     const isOffer = !!bank.bank_id;
@@ -15,69 +16,108 @@ const BankCard = ({ bank, isBestOffer }) => {
 
     const daysLeft = isOffer ? getDaysLeft(bank.expiry_date) : null;
 
+    const handleClick = (e) => {
+        if (onClick) {
+            e.preventDefault();
+            onClick(bank);
+        } else if (!isOffer) {
+            navigate(`/bank/${bankDetails._id}`);
+        }
+    };
+
     return (
         <motion.div
             whileHover={{ y: -5 }}
             transition={{ duration: 0.3 }}
-            className="group"
+            className="group cursor-pointer"
+            onClick={handleClick}
         >
-            <Link to={`/bank/${bankDetails._id}`} className="block h-full">
-                <div className="bg-white rounded-3xl p-6 border border-gray-100 job-search-shadow h-full flex flex-col transition-all group-hover:border-indigo-200 relative overflow-hidden">
-                    {isBestOffer && (
-                        <div className="absolute top-0 right-0 bg-amber-400 text-white px-4 py-1 rounded-bl-xl text-[10px] font-black uppercase tracking-tighter z-10">
-                            Best Offer
-                        </div>
-                    )}
+            <div className="bg-white rounded-3xl p-6 border border-gray-100 job-search-shadow h-full flex flex-col transition-all group-hover:border-indigo-200 relative overflow-hidden">
+                {isBestOffer && (
+                    <div className="absolute top-0 right-0 bg-amber-400 text-white px-4 py-1 rounded-bl-xl text-[10px] font-black uppercase tracking-tighter z-10">
+                        Best Offer
+                    </div>
+                )}
 
-                    <div className="flex justify-between items-start mb-6">
-                        <div className="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 transition-colors group-hover:bg-indigo-600 group-hover:text-white">
-                            <Landmark size={28} />
-                        </div>
-                        <div className="flex flex-col items-end">
-                            <span className="px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest bg-emerald-50 text-emerald-600 border border-emerald-100 mb-2">
-                                {bank.offer_type || bankDetails.offer_type}
+                <div className="flex justify-between items-start mb-6">
+                    <div className="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 transition-colors group-hover:bg-indigo-600 group-hover:text-white">
+                        <Landmark size={28} />
+                    </div>
+                    <div className="flex flex-col items-end">
+                        <span className="px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest bg-emerald-50 text-emerald-600 border border-emerald-100 mb-2">
+                            {bank.offer_type || bankDetails.offer_type}
+                        </span>
+                        {daysLeft !== null && (
+                            <span className={`text-[10px] font-bold ${daysLeft < 7 ? 'text-red-500' : 'text-gray-400'}`}>
+                                {daysLeft > 0 ? `${daysLeft} days left` : 'Expired'}
                             </span>
-                            {daysLeft !== null && (
-                                <span className={`text-[10px] font-bold ${daysLeft < 7 ? 'text-red-500' : 'text-gray-400'}`}>
-                                    {daysLeft > 0 ? `${daysLeft} days left` : 'Expired'}
-                                </span>
-                            )}
-                        </div>
+                        )}
                     </div>
+                </div>
 
-                    <div className="mb-6 flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                            <h3 className="text-xl font-black text-gray-900 group-hover:text-indigo-600 transition-colors line-clamp-1">
-                                {isOffer ? bank.name : bankDetails.title}
-                            </h3>
-                        </div>
-                        <p className="text-sm font-bold text-gray-400 mb-4 flex items-center gap-1">
-                            {bankDetails.company} {isOffer && <span className="text-gray-300">• {bank.store_name}</span>}
-                        </p>
-                        <p className="text-gray-500 text-sm line-clamp-2 leading-relaxed h-10">
-                            {isOffer ? bank.conditions[0] : bankDetails.description}
-                        </p>
+                <div className="mb-6 flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                        <h3 className="text-xl font-black text-gray-900 group-hover:text-indigo-600 transition-colors line-clamp-1">
+                            {isOffer ? bank.name : bankDetails.title}
+                        </h3>
                     </div>
+                    <p className="text-sm font-bold text-gray-400 mb-4 flex items-center gap-1">
+                        {bankDetails.company} {isOffer && <span className="text-gray-300">• {bank.store_name}</span>}
+                    </p>
 
-                    <div className="pt-6 border-t border-gray-50 flex items-center justify-between">
-                        <div className="flex flex-wrap gap-1 max-w-[70%]">
-                            {isOffer && bank.card_types?.map(card => (
-                                <span key={card} className="text-[9px] font-bold bg-gray-100 text-gray-500 px-2 py-0.5 rounded-md">
-                                    {card}
-                                </span>
-                            )) || (
-                                    <div className="flex items-center space-x-2 text-indigo-600">
-                                        <Sparkles size={14} />
-                                        <span className="text-xs font-bold uppercase tracking-tight">{bankDetails.category}</span>
+                    <div className="space-y-3">
+                        <p className="text-gray-500 text-sm line-clamp-2 leading-relaxed">
+                            {isOffer ? bank.conditions?.[0] : bankDetails.description}
+                        </p>
+
+                        {isOffer && (
+                            <div className="flex flex-wrap gap-2">
+                                {bank.min_transaction > 0 && (
+                                    <div className="bg-indigo-50 text-indigo-600 px-3 py-1 rounded-lg text-[10px] font-black uppercase">
+                                        Min: ৳{bank.min_transaction}
                                     </div>
                                 )}
-                        </div>
+                                {bank.promo_code && (
+                                    <div className="bg-amber-50 text-amber-600 border border-amber-100 px-3 py-1 rounded-lg text-[10px] font-black uppercase">
+                                        Code: {bank.promo_code}
+                                    </div>
+                                )}
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+                <div className="pt-6 border-t border-gray-50 flex items-center justify-between mt-auto">
+                    <div className="flex flex-wrap gap-1 max-w-[70%]">
+                        {isOffer && (bank.eligible_cards?.length > 0 ? bank.eligible_cards : bank.card_types)?.map(card => (
+                            <span key={card} className="text-[9px] font-bold bg-gray-100 text-gray-500 px-2 py-0.5 rounded-md">
+                                {card}
+                            </span>
+                        )) || (
+                                <div className="flex items-center space-x-2 text-indigo-600">
+                                    <Sparkles size={14} />
+                                    <span className="text-xs font-bold uppercase tracking-tight">{bankDetails.category}</span>
+                                </div>
+                            )}
+                    </div>
+
+                    {isOffer && bank.url ? (
+                        <a
+                            href={bank.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="bg-indigo-600 text-white p-2 rounded-xl hover:bg-indigo-700 transition-colors"
+                        >
+                            <Zap size={18} />
+                        </a>
+                    ) : (
                         <div className="text-gray-300 group-hover:text-indigo-600 transition-colors">
                             <ChevronRight size={18} />
                         </div>
-                    </div>
+                    )}
                 </div>
-            </Link>
+            </div>
         </motion.div>
     );
 };

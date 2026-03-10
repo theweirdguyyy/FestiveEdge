@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Bank = require('./models/Bank');
-const Offer = require('./models/Offer');
+const { getOfferModel, getAllOfferCollections } = require('./models/Offer');
 require('dotenv').config();
 
 const banks = [
@@ -43,25 +43,40 @@ const seedData = async () => {
 
         // Clear existing data
         await Bank.deleteMany();
-        await Offer.deleteMany();
+
+        // Clear all offer collections
+        const collections = await getAllOfferCollections();
+        for (const collName of collections) {
+            await mongoose.connection.db.dropCollection(collName);
+            console.log(`Dropped collection: ${collName}`);
+        }
 
         // Insert Banks
         const createdBanks = await Bank.insertMany(banks);
-        const bracBankId = createdBanks.find(b => b.title === 'Brac Bank')._id;
-        const dbblBankId = createdBanks.find(b => b.title === 'Dutch-Bangla Bank')._id;
-        const cityBankId = createdBanks.find(b => b.title === 'City Bank')._id;
+        const bracBank = createdBanks.find(b => b.title === 'Brac Bank');
+        const dbblBank = createdBanks.find(b => b.title === 'Dutch-Bangla Bank');
+        const cityBank = createdBanks.find(b => b.title === 'City Bank');
 
-        // Prepare BRAC offers
+        // Prepare and Insert BRAC offers into its own collection
         const bracOffers = bracOffersData.map(o => ({
-            ...o,
-            bank_id: bracBankId,
-            expiry_date: new Date(o.expiry_date)
+            bank_id: bracBank._id,
+            name: o.offer || 'Eid Offer',
+            store_name: o.merchant,
+            offer_type: o.category,
+            festival: 'Ramadan Eid Campaign 2026',
+            expiry_date: new Date('2026-04-30'), // Default campaign end
+            card_types: ['Credit', 'Debit', 'Platinum', 'Signature'],
+            conditions: ['Terms and conditions apply']
         }));
 
-        // Add some sample offers for other banks to keep generic data
-        const genericOffers = [
+        const BracOfferModel = getOfferModel(bracBank.title);
+        await BracOfferModel.insertMany(bracOffers);
+        console.log(`Inserted ${bracOffers.length} offers into ${BracOfferModel.collection.name}`);
+
+        // Insert generic offers into their respective collections
+        const dbblOffers = [
             {
-                bank_id: dbblBankId,
+                bank_id: dbblBank._id,
                 name: 'Eid Special Cashback at Aarong',
                 store_name: 'Aarong',
                 offer_type: 'Cashback',
@@ -70,23 +85,56 @@ const seedData = async () => {
                 discount: 15,
                 conditions: ['Minimum spend 5000 BDT', 'Maximum cashback 1000 BDT'],
                 expiry_date: new Date('2026-04-15')
-            },
-            {
-                bank_id: cityBankId,
-                name: 'Mega Discount at Aarong',
-                store_name: 'Aarong',
-                offer_type: 'Discount',
-                card_types: ['Debit', 'Credit'],
-                festival: 'Eid-ul-Fitr 2026',
-                discount: 20,
-                conditions: ['No minimum spend', 'Valid on selected items'],
-                expiry_date: new Date('2026-04-10')
             }
         ];
+        const DbblOfferModel = getOfferModel(dbblBank.title);
+        await DbblOfferModel.insertMany(dbblOffers);
 
-        await Offer.insertMany([...bracOffers, ...genericOffers]);
+        // Import CITY offers
+        const cityOffersData = require('./city_offers.json');
+        const cityOffers = [];
 
-        console.log(`Data Seeded Successfully! Total offers: ${bracOffers.length + genericOffers.length}`);
+        // Recursive parser for City Bank's nested category structure
+        const parseCityOffers = (obj, currentCategory = 'Regular') => {
+            for (const key in obj) {
+                if (Array.isArray(obj[key])) {
+                    // It's an array of offers
+                    obj[key].forEach(o => {
+                        // Extract min_transaction number from string like "BDT 5,000"
+                        const minTransMatch = o.min_transaction?.match(/\d+/g);
+                        const minTransValue = minTransMatch ? parseInt(minTransMatch.join('')) : 0;
+
+                        cityOffers.push({
+                            bank_id: cityBank._id,
+                            name: o.offer || 'Eid Offer',
+                            store_name: o.merchant || 'Various',
+                            offer_type: o.category || 'Discount',
+                            lifestyle_category: currentCategory.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+                            festival: cityOffersData.campaign || 'Ramadan Eid Campaign 2026',
+                            expiry_date: new Date('2026-04-30'),
+                            discount: 0, // Could be parsed from 'offer' string if needed
+                            conditions: [o.offer, o.max_uses].filter(Boolean),
+                            promo_code: o.promo_code,
+                            min_transaction: minTransValue,
+                            url: o.url,
+                            eligible_cards: o.eligible_cards ? [o.eligible_cards] : [],
+                            card_types: ['Credit', 'Debit']
+                        });
+                    });
+                } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+                    // It's a subcategory
+                    parseCityOffers(obj[key], key === 'categories' ? 'Regular' : key);
+                }
+            }
+        };
+
+        parseCityOffers(cityOffersData.categories);
+
+        const CityOfferModel = getOfferModel(cityBank.title);
+        await CityOfferModel.insertMany(cityOffers);
+        console.log(`Inserted ${cityOffers.length} offers into ${CityOfferModel.collection.name}`);
+
+        console.log('Data Seeded Successfully!');
         process.exit();
     } catch (error) {
         console.error(`Error: ${error.message}`);

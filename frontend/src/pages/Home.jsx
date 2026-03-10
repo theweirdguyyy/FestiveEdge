@@ -1,53 +1,31 @@
 import { useState, useEffect } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { bankService, offerService } from '../services/api';
 import BankCard from '../components/BankCard';
 import SearchBar from '../components/SearchBar';
 import BankSearchSummary from '../components/BankSearchSummary';
-import { Loader2, AlertCircle, ShoppingBag, Plane, Utensils, Monitor, LayoutGrid, ArrowRight, ShieldCheck, Star } from 'lucide-react';
+import { Loader2, AlertCircle, ShoppingBag, Plane, Utensils, Monitor, LayoutGrid, ArrowRight, ShieldCheck, Star, Landmark } from 'lucide-react';
 
 const Home = () => {
-    const [offers, setOffers] = useState([]);
+    const navigate = useNavigate();
+    const [banks, setBanks] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [searchParams, setSearchParams] = useState({ store: '', bank: '' });
     const [filterCategory, setFilterCategory] = useState('');
-    const [visibleCount, setVisibleCount] = useState(12);
 
     useEffect(() => {
-        fetchOffers();
-        setVisibleCount(12); // Reset pagination on search change
-    }, [searchParams, filterCategory]);
+        fetchBanks();
+    }, []);
 
-    const fetchOffers = async () => {
+    const fetchBanks = async () => {
         try {
             setLoading(true);
-            const res = await offerService.getAllOffers({
-                store: searchParams.store,
-                bank: searchParams.bank,
-                category: filterCategory
-            });
-
-            // Best Offer Logic: Group by store and find max discount
-            const rawOffers = res.data.data;
-            const storeMaxMap = {};
-            rawOffers.forEach(o => {
-                if (o.discount > 0) {
-                    if (!storeMaxMap[o.store_name] || o.discount > storeMaxMap[o.store_name]) {
-                        storeMaxMap[o.store_name] = o.discount;
-                    }
-                }
-            });
-
-            const processedOffers = rawOffers.map(o => ({
-                ...o,
-                isBestOffer: o.discount > 0 && o.discount === storeMaxMap[o.store_name] && rawOffers.filter(x => x.store_name === o.store_name).length > 1
-            }));
-
-            setOffers(processedOffers);
+            const res = await bankService.getBanks();
+            setBanks(res.data.data);
             setError(null);
         } catch (err) {
-            setError('Failed to load offers. Please try again later.');
+            setError('Failed to load banks. Please try again later.');
         } finally {
             setLoading(false);
         }
@@ -75,7 +53,7 @@ const Home = () => {
                                 </p>
 
                                 <div className="hidden lg:block">
-                                    <SearchBar onSearch={setSearchParams} />
+                                    <SearchBar />
                                 </div>
                             </motion.div>
                         </div>
@@ -99,10 +77,9 @@ const Home = () => {
                 </div>
 
                 <div className="lg:hidden px-6 pb-20 mt-[-40px]">
-                    <SearchBar onSearch={setSearchParams} />
+                    <SearchBar />
                 </div>
             </section>
-
             {/* Browse by Category Section */}
             <section className="py-24 bg-gray-50/50">
                 <div className="container mx-auto px-6">
@@ -126,7 +103,7 @@ const Home = () => {
                         ].map((cat) => (
                             <button
                                 key={cat.name}
-                                onClick={() => setFilterCategory(cat.id)}
+                                onClick={() => navigate(`/search?category=${cat.id}`)}
                                 className={`p-8 rounded-3xl border transition-all duration-300 text-left group ${filterCategory === cat.id
                                     ? 'bg-indigo-600 border-indigo-600 text-white shadow-xl shadow-indigo-100'
                                     : 'bg-white border-gray-100 text-gray-600 hover:border-indigo-600 hover:shadow-lg'
@@ -155,25 +132,25 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                        {['Standard Chartered', 'HSBC', 'City Bank', 'Brac Bank', 'EBL', 'MTB'].map((bankName) => (
-                            <div key={bankName} className="flex flex-col items-center">
+                        {banks.slice(0, 6).map((bank) => (
+                            <Link key={bank._id} to={`/bank/${bank._id}`} className="flex flex-col items-center">
                                 <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-2">
                                     <ShieldCheck className="text-gray-400" />
                                 </div>
-                                <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">{bankName}</span>
-                            </div>
+                                <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">{bank.title}</span>
+                            </Link>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Main Offers Section */}
+            {/* Main Banks Section */}
             <div className="container mx-auto px-6 py-24">
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-12">
                     <div>
                         <span className="text-indigo-600 font-bold tracking-widest text-xs uppercase mb-3 block">Special Curations</span>
-                        <h2 className="text-4xl font-black text-gray-900">Exclusive Bank Offers</h2>
-                        <p className="text-gray-500 mt-2">Showing {Math.min(visibleCount, offers.length)} of {offers.length} amazing deals</p>
+                        <h2 className="text-4xl font-black text-gray-900">Exclusive Bank Partners</h2>
+                        <p className="text-gray-500 mt-2">Discover banks offering exceptional deals this season</p>
                     </div>
                     {filterCategory && (
                         <button
@@ -187,55 +164,56 @@ const Home = () => {
 
                 {loading ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[1, 2, 3, 4, 5, 6].map((i) => (
-                            <div key={i} className="bg-gray-50 h-80 rounded-3xl animate-pulse" />
+                        {[1, 2, 3].map((i) => (
+                            <div key={i} className="bg-gray-50 h-80 rounded-[2.5rem] animate-pulse" />
                         ))}
                     </div>
                 ) : error ? (
-                    <div className="bg-red-50 p-16 rounded-3xl text-center max-w-2xl mx-auto border border-red-100">
+                    <div className="bg-red-50 p-16 rounded-[2.5rem] text-center max-w-2xl mx-auto border border-red-100">
                         <AlertCircle size={48} className="text-red-500 mx-auto mb-6" />
                         <h3 className="text-2xl font-bold text-gray-900 mb-2">Encountered an issue</h3>
                         <p className="text-gray-600 mb-8">{error}</p>
-                        <button onClick={fetchOffers} className="bg-red-600 text-white px-8 py-3 rounded-xl font-bold shadow-lg shadow-red-100">
+                        <button onClick={fetchBanks} className="bg-red-600 text-white px-8 py-3 rounded-xl font-bold">
                             Try Again
                         </button>
                     </div>
-                ) : offers.length === 0 ? (
-                    <div className="text-center py-32 border-2 border-dashed border-gray-100 rounded-[3rem] bg-gray-50/30">
-                        <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <Star size={40} className="text-gray-300" />
-                        </div>
-                        <p className="text-gray-400 text-xl font-medium">No offers found for the current search.</p>
-                        <button onClick={() => { setSearchParams({ store: '', bank: '' }); setFilterCategory(''); }} className="text-indigo-600 font-bold mt-4 underline">
-                            Clear all searches
-                        </button>
+                ) : banks.length === 0 ? (
+                    <div className="text-center py-32 bg-gray-50 rounded-[3rem]">
+                        <p className="text-gray-400 text-xl font-medium">No active bank partners found.</p>
                     </div>
                 ) : (
-                    <>
-                        {searchParams.bank && (
-                            <BankSearchSummary
-                                bankName={searchParams.bank}
-                                offerCount={offers.length}
-                                bankId={offers[0]?.bank_id?._id}
-                            />
-                        )}
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                            {offers.slice(0, visibleCount).map((offer) => (
-                                <BankCard key={offer._id} bank={offer} isBestOffer={offer.isBestOffer} />
-                            ))}
-                        </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        {banks.map((bank) => (
+                            <Link
+                                key={bank._id}
+                                to={`/bank/${bank._id}`}
+                                className="group bg-white border border-gray-100 rounded-[2.5rem] p-10 hover:border-indigo-600 hover:shadow-2xl hover:shadow-indigo-50 transition-all duration-500 relative overflow-hidden"
+                            >
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-bl-full -mr-10 -mt-10 group-hover:bg-indigo-600 transition-colors duration-500" />
 
-                        {visibleCount < offers.length && (
-                            <div className="mt-16 text-center">
-                                <button
-                                    onClick={() => setVisibleCount(prev => prev + 12)}
-                                    className="bg-white border-2 border-indigo-600 text-indigo-600 px-12 py-5 rounded-2xl font-black hover:bg-indigo-600 hover:text-white transition-all shadow-xl shadow-indigo-50"
-                                >
-                                    Show More Offers
-                                </button>
-                            </div>
-                        )}
-                    </>
+                                <div className="relative z-10">
+                                    <div className="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white transition-colors">
+                                        <Landmark size={32} />
+                                    </div>
+                                    <h3 className="text-2xl font-black text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">
+                                        {bank.title}
+                                    </h3>
+                                    <p className="text-gray-500 font-medium mb-8 leading-relaxed">
+                                        {bank.description || 'Exclusive festival offers and cashback deals for cardholders.'}
+                                    </p>
+
+                                    <div className="flex items-center justify-between pt-8 border-t border-gray-50">
+                                        <span className="bg-indigo-50 text-indigo-600 px-4 py-2 rounded-xl text-sm font-bold group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                                            {bank.offerCount} Offers
+                                        </span>
+                                        <span className="text-indigo-600 font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                                            View Deals <ArrowRight size={18} />
+                                        </span>
+                                    </div>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
                 )}
             </div>
 

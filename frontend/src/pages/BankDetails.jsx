@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { offerService, bankService } from '../services/api';
 import BankCard from '../components/BankCard';
+import OfferModal from '../components/OfferModal';
 import { ArrowLeft, Landmark, ShoppingBag, Loader2 } from 'lucide-react';
 
 const BankDetails = () => {
@@ -11,6 +12,7 @@ const BankDetails = () => {
     const [bank, setBank] = useState(null);
     const [loading, setLoading] = useState(true);
     const [visibleCount, setVisibleCount] = useState(12);
+    const [selectedOffer, setSelectedOffer] = useState(null);
 
     useEffect(() => {
         fetchData();
@@ -36,6 +38,20 @@ const BankDetails = () => {
             setLoading(false);
         }
     };
+
+    const groupedOffers = offers.reduce((acc, offer) => {
+        const cat = offer.lifestyle_category || 'Regular';
+        if (!acc[cat]) acc[cat] = [];
+        acc[cat].push(offer);
+        return acc;
+    }, {});
+
+    const categories = Object.keys(groupedOffers).sort();
+    const [activeCategory, setActiveCategory] = useState('All');
+
+    const filteredOffers = activeCategory === 'All'
+        ? offers
+        : groupedOffers[activeCategory] || [];
 
     if (loading) {
         return (
@@ -67,20 +83,50 @@ const BankDetails = () => {
                     </div>
                 </div>
 
+                {/* Category Navigation */}
+                <div className="flex flex-wrap gap-4 mb-12">
+                    <button
+                        onClick={() => setActiveCategory('All')}
+                        className={`px-8 py-3 rounded-2xl font-black transition-all ${activeCategory === 'All' ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'}`}
+                    >
+                        All ({offers.length})
+                    </button>
+                    {categories.map(cat => (
+                        <button
+                            key={cat}
+                            onClick={() => setActiveCategory(cat)}
+                            className={`px-8 py-3 rounded-2xl font-black transition-all ${activeCategory === cat ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'}`}
+                        >
+                            {cat} ({groupedOffers[cat].length})
+                        </button>
+                    ))}
+                </div>
+
                 <div className="flex items-center justify-between mb-12">
-                    <h2 className="text-3xl font-black text-gray-900">All Offers</h2>
+                    <h2 className="text-3xl font-black text-gray-900">
+                        {activeCategory === 'All' ? 'All Offers' : `${activeCategory} Offers`}
+                    </h2>
                     <div className="text-gray-500 font-medium">
-                        Showing {Math.min(visibleCount, offers.length)} of {offers.length}
+                        Showing {Math.min(visibleCount, filteredOffers.length)} of {filteredOffers.length}
                     </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 pb-20">
-                    {offers.slice(0, visibleCount).map(offer => (
-                        <BankCard key={offer._id} bank={offer} />
+                    {filteredOffers.slice(0, visibleCount).map(offer => (
+                        <BankCard
+                            key={offer._id}
+                            bank={offer}
+                            onClick={(off) => setSelectedOffer(off)}
+                        />
                     ))}
                 </div>
 
-                {visibleCount < offers.length && (
+                <OfferModal
+                    offer={selectedOffer}
+                    onClose={() => setSelectedOffer(null)}
+                />
+
+                {visibleCount < filteredOffers.length && (
                     <div className="pb-24 text-center">
                         <button
                             onClick={() => setVisibleCount(prev => prev + 12)}
