@@ -9,6 +9,12 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --primary: #064e3b;
+  --primary-light: #065f46;
+  --secondary: #ca8a04;
+  --accent: #10b981;
+  --bg-dark: #022c22;
+
   color-scheme: light;
   color: #1f2937;
   background-color: #ffffff;
@@ -17,6 +23,36 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+.bg-utsob-gradient {
+  background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #065f46 100%);
+}
+
+.text-gold {
+  color: #ca8a04;
+}
+
+.bg-gold {
+  background-color: #ca8a04;
+}
+
+.islamic-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20 L0 0 M20 20 L40 0 M20 20 L40 40 M20 20 L0 40' stroke='%23ffffff' stroke-opacity='0.05' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+.mosque-silhouette {
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 100 L10 80 Q 25 60 40 80 L40 100 M60 100 L60 80 Q 75 60 90 80 L90 100 M25 80 L25 50 Q 50 10 75 50 L75 80 Z'/%3E%3C/svg%3E");
+  mask-size: cover;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 body {

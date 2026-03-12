@@ -1,20 +1,11 @@
 import { useNavigate } from 'react-router-dom';
-import { ChevronRight, Landmark, Zap, Sparkles } from 'lucide-react';
+import { ChevronRight, Landmark, Zap, Sparkles, Lamp, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const BankCard = ({ bank, isBestOffer, onClick }) => {
     const navigate = useNavigate();
-    // For general listing, the 'bank' object might actually be an 'offer' object if we fetch from /api/offers
     const bankDetails = bank.bank_id || bank;
     const isOffer = !!bank.bank_id;
-
-    // Calculate days left
-    const getDaysLeft = (date) => {
-        const diff = new Date(date) - new Date();
-        return Math.ceil(diff / (1000 * 60 * 60 * 24));
-    };
-
-    const daysLeft = isOffer ? getDaysLeft(bank.expiry_date) : null;
 
     const handleClick = (e) => {
         if (onClick) {
@@ -27,105 +18,72 @@ const BankCard = ({ bank, isBestOffer, onClick }) => {
 
     return (
         <motion.div
-            whileHover={{ y: -5 }}
+            whileHover={{ y: -5, scale: 1.02 }}
             transition={{ duration: 0.3 }}
-            className="group cursor-pointer"
+            className="group cursor-pointer w-full max-w-sm md:max-w-md"
             onClick={handleClick}
         >
-            <div className="bg-white rounded-3xl p-6 border border-gray-100 job-search-shadow h-full flex flex-col transition-all group-hover:border-indigo-200 relative overflow-hidden">
+            <div className="bg-[#064e3b] rounded-[2rem] p-6 border border-white/10 shadow-2xl relative overflow-hidden h-full flex flex-col group-hover:border-[#ca8a04]/50 transition-all islamic-pattern">
+                {/* Bank Header */}
+                <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center p-2 shrink-0 shadow-lg">
+                        {/* Placeholder for real logo, using Bank icon for now */}
+                        <Landmark size={24} className="text-[#064e3b]" />
+                    </div>
+                    <div className="flex flex-col">
+                        <h4 className="text-white font-bold text-xs uppercase tracking-wider line-clamp-1">
+                            {bankDetails.title}
+                        </h4>
+                        <span className="text-gray-400 text-[9px] font-bold uppercase tracking-widest">
+                            {bankDetails.company || 'Premier Partner'}
+                        </span>
+                    </div>
+                    {/* Corner Motif */}
+                    <div className="absolute top-4 right-4 text-[#ca8a04]/30">
+                        <Lamp size={20} />
+                    </div>
+                </div>
+
+                {/* Offer Body */}
+                <div className="flex-1 flex flex-col justify-center">
+                    <h3 className="text-[#ca8a04] text-xl font-black mb-1 font-outfit leading-tight group-hover:text-white transition-colors">
+                        {isOffer ? bank.name : "Exclusive Cashback"}
+                    </h3>
+                    <p className="text-gray-300 text-[10px] font-bold uppercase tracking-widest mb-4">
+                        {isOffer ? bank.conditions?.[0] : bankDetails.category}
+                    </p>
+                </div>
+
+                {/* Card Footer / Action */}
+                <div className="mt-4 flex items-center justify-between">
+                    <button className="bg-white/10 hover:bg-[#ca8a04] text-white px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all border border-white/5 flex items-center gap-2 group/btn">
+                        VIEW OFFER
+                        <ArrowRight size={12} className="group-hover/btn:translate-x-1 transition-transform" />
+                    </button>
+
+                    {/* Small Icon / Illustration Placeholder */}
+                    <div className="opacity-40 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all">
+                        <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center">
+                            <Zap size={20} className="text-[#ca8a04]" />
+                        </div>
+                    </div>
+                </div>
+
+                {/* Status Badge */}
                 {isBestOffer && (
-                    <div className="absolute top-0 right-0 bg-amber-400 text-white px-4 py-1 rounded-bl-xl text-[10px] font-black uppercase tracking-tighter z-10">
-                        Best Offer
+                    <div className="absolute top-0 right-0 py-1 px-4 bg-[#ca8a04] text-[#064e3b] text-[8px] font-black uppercase tracking-tighter rounded-bl-xl shadow-lg">
+                        Featured
                     </div>
                 )}
-
-                <div className="flex justify-between items-start mb-6">
-                    <div className="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 transition-colors group-hover:bg-indigo-600 group-hover:text-white">
-                        <Landmark size={28} />
-                    </div>
-                    <div className="flex flex-col items-end">
-                        <span className="px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest bg-emerald-50 text-emerald-600 border border-emerald-100 mb-2">
-                            {bank.offer_type || bankDetails.offer_type}
-                        </span>
-                        {daysLeft !== null && (
-                            <span className={`text-[10px] font-bold ${daysLeft < 7 ? 'text-red-500' : 'text-gray-400'}`}>
-                                {daysLeft > 0 ? `${daysLeft} days left` : 'Expired'}
-                            </span>
-                        )}
-                    </div>
-                </div>
-
-                <div className="mb-6 flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                        <h3 className="text-xl font-black text-gray-900 group-hover:text-indigo-600 transition-colors line-clamp-1">
-                            {isOffer ? bank.name : bankDetails.title}
-                        </h3>
-                    </div>
-                    <p className="text-sm font-bold text-gray-400 mb-4 flex items-center gap-1">
-                        {bankDetails.company} {isOffer && <span className="text-gray-300">• {bank.store_name}</span>}
-                    </p>
-
-                    <div className="space-y-3">
-                        <p className="text-gray-500 text-sm line-clamp-2 leading-relaxed">
-                            {isOffer ? bank.conditions?.[0] : bankDetails.description}
-                        </p>
-
-                        {isOffer && (
-                            <div className="flex flex-wrap gap-2">
-                                {bank.min_transaction > 0 && (
-                                    <div className="bg-indigo-50 text-indigo-600 px-3 py-1 rounded-lg text-[10px] font-black uppercase">
-                                        Min: ৳{bank.min_transaction}
-                                    </div>
-                                )}
-                                {bank.promo_code && (
-                                    <div className="bg-amber-50 text-amber-600 border border-amber-100 px-3 py-1 rounded-lg text-[10px] font-black uppercase">
-                                        Code: {bank.promo_code}
-                                    </div>
-                                )}
-                            </div>
-                        )}
-                    </div>
-                </div>
-
-                <div className="pt-6 border-t border-gray-50 flex items-center justify-between mt-auto">
-                    <div className="flex flex-wrap gap-1 max-w-[70%]">
-                        {isOffer && (bank.eligible_cards?.length > 0 ? bank.eligible_cards : bank.card_types)?.map(card => (
-                            <span key={card} className="text-[9px] font-bold bg-gray-100 text-gray-500 px-2 py-0.5 rounded-md">
-                                {card}
-                            </span>
-                        )) || (
-                                <div className="flex items-center space-x-2 text-indigo-600">
-                                    <Sparkles size={14} />
-                                    <span className="text-xs font-bold uppercase tracking-tight">{bankDetails.category}</span>
-                                </div>
-                            )}
-                    </div>
-
-                    {isOffer && bank.url ? (
-                        <a
-                            href={bank.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={(e) => e.stopPropagation()}
-                            className="bg-indigo-600 text-white p-2 rounded-xl hover:bg-indigo-700 transition-colors"
-                        >
-                            <Zap size={18} />
-                        </a>
-                    ) : (
-                        <div className="text-gray-300 group-hover:text-indigo-600 transition-colors">
-                            <ChevronRight size={18} />
-                        </div>
-                    )}
-                </div>
             </div>
         </motion.div>
     );
 };
+
+export default BankCard;
 
 const LandmarkIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
     </svg>
 );
-
-export default BankCard;

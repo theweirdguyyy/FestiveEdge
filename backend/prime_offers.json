@@ -1,0 +1,903 @@
+{
+    "source": "https://www.primebank.com.bd/ramadan-2026-offers/",
+    "bank": "Prime Bank PLC",
+    "campaign": "Ramadan Offers 2026",
+    "validity": "Valid till Eid-ul-Fitr, 2026",
+    "scraped_at": "2026-03-10T21:15:10.269Z",
+    "data_note": "Category structure and max offer values extracted from index page. Individual merchant details require browser-based scraping of each .php sub-page.",
+    "offer_types": [
+        "Cashback Offers",
+        "Discount Offers",
+        "Buy 1 Get up to 4"
+    ],
+    "categories": [
+        {
+            "category": "Grocery Cashback",
+            "offer_type": "Cashback",
+            "max_cashback": "BDT 500",
+            "url": "https://www.primebank.com.bd/ramadan-2026-grocery-cashback-offers.php",
+            "merchants": []
+        },
+        {
+            "category": "Shopping Cashback",
+            "offer_type": "Cashback",
+            "max_cashback": "BDT 1,500",
+            "url": "https://www.primebank.com.bd/ramadan-2026-shopping-cashback-offers.php",
+            "merchants": []
+        },
+        {
+            "category": "Electronics Cashback",
+            "offer_type": "Cashback",
+            "max_cashback": "BDT 10,000",
+            "url": "https://www.primebank.com.bd/ramadan-2026-electronics-cashback-offers.php",
+            "merchants": []
+        },
+        {
+            "category": "Furniture Cashback",
+            "offer_type": "Cashback",
+            "max_cashback": "BDT 10,000",
+            "url": "https://www.primebank.com.bd/ramadan-2026-furniture-cashback-offers.php",
+            "merchants": []
+        },
+        {
+            "category": "Ticketing Cashback",
+            "offer_type": "Cashback",
+            "max_cashback": "BDT 500",
+            "url": "https://www.primebank.com.bd/ramadan-2026-ticketing-cashback-offers.php",
+            "merchants": []
+        },
+        {
+            "category": "Lifestyle – Clothings",
+            "offer_type": "Discount",
+            "max_discount": "25%",
+            "url": "https://www.primebank.com.bd/ramadan-2026-clothing-offers.php",
+            "merchants": [
+                {
+                    "name": "Priyo (Banani)",
+                    "discount": "Up to 25%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Dishari",
+                    "discount": "Up to 20%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Giordano Bangladesh",
+                    "discount": "20%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Man One",
+                    "discount": "20%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Fiero",
+                    "discount": "Up to 15%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Dalim's",
+                    "discount": "Up to 15%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Prem's Collection",
+                    "discount": "15%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "VIVA Creation",
+                    "discount": "15%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Zaara Fashion Mall",
+                    "discount": "15%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Bidora",
+                    "discount": "15%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Lubab",
+                    "discount": "15%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Astorion (On RMG Only)",
+                    "discount": "10%",
+                    "offer_type": "Discount",
+                    "note": "On RMG only"
+                },
+                {
+                    "name": "B2",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Banglar Mela (Except Deshi Dosh)",
+                    "discount": "10%",
+                    "offer_type": "Discount",
+                    "note": "Except Deshi Dosh"
+                },
+                {
+                    "name": "Belmonte Fabrics Ltd",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "JK Foreign Brands",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Kay Kraft (Except Deshi Dosh)",
+                    "discount": "10%",
+                    "offer_type": "Discount",
+                    "note": "Except Deshi Dosh"
+                },
+                {
+                    "name": "MENZ KLUB",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Myth",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Nabila",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Nogordola (Except Deshi Dosh)",
+                    "discount": "10%",
+                    "offer_type": "Discount",
+                    "note": "Except Deshi Dosh"
+                },
+                {
+                    "name": "Pride Fashion",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "QRIUS",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Red Origin",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Sadakalo (Except Deshi Dosh)",
+                    "discount": "10%",
+                    "offer_type": "Discount",
+                    "note": "Except Deshi Dosh"
+                },
+                {
+                    "name": "SaRa Lifestyle Ltd.",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Smartex",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Spark Gear",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Shodeshpolli",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "YoungKay",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Annisa Gallery",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Anyamela",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Blue Noise",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Bostro Mela",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Ela",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Elite Lifestyle",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Faabrico",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Good Luck Garments",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Hawlader Mart",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Hoimonti Fashion",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Jasy",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "KL Sweden",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Lavender (Police Plaza)",
+                    "discount": "10%",
+                    "offer_type": "Discount",
+                    "note": "Police Plaza branch"
+                },
+                {
+                    "name": "Mammy",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Neddle Fight",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Rajkumari",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Rejia Boutique",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Sarovar Exclusive Brand",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Style World",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Tangail Tant Ghar",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Tunazzina Jabed",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                }
+            ]
+        },
+        {
+            "category": "Lifestyle – Footwears",
+            "offer_type": "Discount",
+            "max_discount": "20%",
+            "url": "https://www.primebank.com.bd/ramadan-2026-footwear-offers.php",
+            "merchants": [
+                {
+                    "name": "Shabab Leather",
+                    "discount": "20%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Comfort Fashion",
+                    "discount": "15%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Co-Walk",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Leatherex",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Nipun's Gallery",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Rajkumari",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Vibrant",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Woodland",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                }
+            ]
+        },
+        {
+            "category": "Lifestyle – Gifts",
+            "offer_type": "Discount",
+            "max_discount": "35%",
+            "url": "https://www.primebank.com.bd/ramadan-2026-gift-item-offers.php",
+            "merchants": [],
+            "sub_categories": [
+                {
+                    "sub_category": "Watch",
+                    "merchants": [
+                        {
+                            "name": "Accurate Somoy",
+                            "discount": "Up to 25%",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Time World BD",
+                            "discount": "Up to 20%",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Blue Noise",
+                            "discount": "10%",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "NK Products",
+                            "discount": "10%",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Secondbit",
+                            "discount": "10%",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Watches World",
+                            "discount": "10%",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Fashion Hub Timepiece",
+                            "discount": "10%",
+                            "offer_type": "Discount"
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Perfume",
+                    "merchants": [
+                        {
+                            "name": "La Reina",
+                            "discount": "10%",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Stardust",
+                            "discount": "5%",
+                            "offer_type": "Discount"
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jewellery",
+                    "merchants": [
+                        {
+                            "name": "Nakshatra Gold",
+                            "discount": "35% on Diamond",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "B.C. SEN JEWELLERS",
+                            "discount": "30% on Diamond & Gold Making charge",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Queen Pearl House",
+                            "discount": "30% on Diamond & 30% on Gold Making charge",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Rizvy Jewellers",
+                            "discount": "30% on Diamond",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Anjali Gold",
+                            "discount": "30% on Diamond",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Surana Gold",
+                            "discount": "30% on Diamond",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Zaveri Gold",
+                            "discount": "30% on Diamond",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "AL-HASSAN DIAMOND GALLERY",
+                            "discount": "Up to 27% on Diamond",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Alif Jewellers & Diamond",
+                            "discount": "25% on Diamond",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Kundan",
+                            "discount": "25% on Jewellery",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Pearl Kingdom",
+                            "discount": "25% on Pearl Jewellery",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Alina Gold & Diamond",
+                            "discount": "25% on Diamond",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Royal Diamond",
+                            "discount": "25% on Diamond",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "Gitanjali Jewellers",
+                            "discount": "25% on Diamond",
+                            "offer_type": "Discount"
+                        },
+                        {
+                            "name": "D'Damas Jewellers",
+                            "discount": "20% on Diamond",
+                            "offer_type": "Discount"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "category": "Lifestyle – Health & Beauty Care",
+            "offer_type": "Discount",
+            "max_discount": "20%",
+            "url": "https://www.primebank.com.bd/ramadan-2026-health-and-beauty-care-offers.php",
+            "merchants": [
+                {
+                    "name": "Luxura Aesthetics",
+                    "discount": "20% on all services",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Mens Klub",
+                    "discount": "Up to 20%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Surecell",
+                    "discount": "Up to 20%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Vibes",
+                    "discount": "Up to 20%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "VLCC",
+                    "discount": "15%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Menz Crown",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "HairBox",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Glam by Asmita",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Fenina Flaunt Studio Salon BD",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Este Medical",
+                    "discount": "10%",
+                    "offer_type": "Discount"
+                }
+            ]
+        },
+        {
+            "category": "Restaurants",
+            "offer_type": "Discount",
+            "max_discount": "15%",
+            "url": "https://www.primebank.com.bd/ramadan-2026-dining-discount-offers.php",
+            "merchants": [
+                {
+                    "name": "BAO",
+                    "discount": "Up to 15%",
+                    "location": "Gulshan 1, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Kiva Han",
+                    "discount": "Up to 15%",
+                    "location": "Gulshan 1, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Grand Circle Inn Hotel & Suites",
+                    "discount": "15%",
+                    "location": "Rajarbag, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "138 East",
+                    "discount": "10%",
+                    "location": "Gulshan 1, Dhaka",
+                    "offer_type": "Discount",
+                    "note": "Only for Priority Banking Debit Card"
+                },
+                {
+                    "name": "Arabian Nights",
+                    "discount": "10%",
+                    "location": "Dhanmondi, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Bamboo Shoot",
+                    "discount": "10%",
+                    "location": "Gulshan Avenue, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Cloud Courtyard",
+                    "discount": "10%",
+                    "location": "Badda, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Delicious Cuisine",
+                    "discount": "10%",
+                    "location": "Mirpur, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "East Market",
+                    "discount": "10%",
+                    "location": "Gulshan 1, Dhaka",
+                    "offer_type": "Discount",
+                    "note": "Only for Priority Banking Debit Card"
+                },
+                {
+                    "name": "Halda Valley",
+                    "discount": "10%",
+                    "location": "Banani, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Hot Beans",
+                    "discount": "10%",
+                    "location": "Banani, Dhaka",
+                    "offer_type": "Discount",
+                    "note": "Only for Priority Banking Debit Card"
+                },
+                {
+                    "name": "Kavazo Limited",
+                    "discount": "10%",
+                    "location": "Gulshan Avenue, Dhaka",
+                    "offer_type": "Discount",
+                    "note": "Only for Priority Banking Debit Card"
+                },
+                {
+                    "name": "Khalifa's Restaurant",
+                    "discount": "10%",
+                    "location": "Gulshan Avenue, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Kingfisher Restaurant",
+                    "discount": "10%",
+                    "location": "Uttara, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "New Steak Junction",
+                    "discount": "10%",
+                    "location": "Uttara, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "O'play",
+                    "discount": "10%",
+                    "location": "Banani, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Samdado Ltd",
+                    "discount": "10%",
+                    "location": "Gulshan 1, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Sky View Restaurant",
+                    "discount": "10%",
+                    "location": "Tejgaon, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Super Kabab & Coffee",
+                    "discount": "10%",
+                    "location": "Hatirpool, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Sushi Go",
+                    "discount": "10%",
+                    "location": "Gulshan Avenue, Dhaka",
+                    "offer_type": "Discount",
+                    "note": "Only for Priority Banking Debit Card"
+                },
+                {
+                    "name": "Tarka",
+                    "discount": "10%",
+                    "location": "Banani, Dhaka",
+                    "offer_type": "Discount",
+                    "note": "Only for Priority Banking Debit Card"
+                },
+                {
+                    "name": "Thai Signature",
+                    "discount": "10%",
+                    "location": "Gulshan, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Ugochi",
+                    "discount": "10%",
+                    "location": "Gulshan Avenue, Dhaka",
+                    "offer_type": "Discount",
+                    "note": "Only for Priority Banking Debit Card"
+                },
+                {
+                    "name": "New Cheers Multicuisine Restaurant",
+                    "discount": "10%",
+                    "location": "Dhanmondi, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Mazeda Café",
+                    "discount": "10%",
+                    "location": "Dhanmondi, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "D'Smaak Café",
+                    "discount": "10%",
+                    "location": "Dhanmondi, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Sizzling Yard",
+                    "discount": "10%",
+                    "location": "Dhanmondi, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "The Dhaka",
+                    "discount": "10%",
+                    "location": "Dhanmondi, Dhaka",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Artisan Coffee",
+                    "discount": "10%",
+                    "location": "Sylhet",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Café Aarko",
+                    "discount": "10%",
+                    "location": "Sylhet",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Grand Buffet",
+                    "discount": "10%",
+                    "location": "Sylhet",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Kababia",
+                    "discount": "10%",
+                    "location": "Sylhet",
+                    "offer_type": "Discount",
+                    "note": "Except Indian Item"
+                },
+                {
+                    "name": "Magnolia Restaurant",
+                    "discount": "10%",
+                    "location": "Sylhet",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Mashwi",
+                    "discount": "10%",
+                    "location": "Sylhet",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Spicy Restaurant",
+                    "discount": "10%",
+                    "location": "Sylhet",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Tabaqo",
+                    "discount": "10%",
+                    "location": "Sylhet",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "The Swad",
+                    "discount": "10%",
+                    "location": "Sylhet",
+                    "offer_type": "Discount",
+                    "note": "For room guests only"
+                },
+                {
+                    "name": "Woondaal",
+                    "discount": "10%",
+                    "location": "Sylhet",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Bellpepper Restaurant",
+                    "discount": "10%",
+                    "location": "Chattogram",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Bonjour",
+                    "discount": "10% A-la Carte / 5% Buffet",
+                    "location": "Chattogram",
+                    "offer_type": "Discount",
+                    "note": "10% on A-la Carte, 5% on Buffet"
+                },
+                {
+                    "name": "Eden Restaurant & Kids Zone",
+                    "discount": "10%",
+                    "location": "Chattogram",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Hunger Killers",
+                    "discount": "10%",
+                    "location": "Chattogram",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Pizza Lounge",
+                    "discount": "10%",
+                    "location": "Chattogram",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Shangri-La Inn Restaurant",
+                    "discount": "10%",
+                    "location": "Chattogram",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Silver Spoon",
+                    "discount": "10%",
+                    "location": "Chattogram",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Ten 11 Lounge",
+                    "discount": "10%",
+                    "location": "Chattogram",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "The Golden Spoon",
+                    "discount": "10%",
+                    "location": "Chattogram",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "VR Chittagong",
+                    "discount": "10%",
+                    "location": "Chattogram",
+                    "offer_type": "Discount"
+                },
+                {
+                    "name": "Panorama",
+                    "discount": "7%",
+                    "location": "Sylhet",
+                    "offer_type": "Discount"
+                }
+            ]
+        },
+        {
+            "category": "Travel",
+            "offer_type": "Discount",
+            "max_discount": "10%",
+            "url": "https://www.primebank.com.bd/ramadan-2026-travel-offers.php",
+            "merchants": []
+        },
+        {
+            "category": "Online Shopping",
+            "offer_type": "Discount",
+            "max_discount": "20%",
+            "url": "https://www.primebank.com.bd/ramadan-2026-online-shopping.php",
+            "merchants": []
+        },
+        {
+            "category": "Buffet Dining",
+            "offer_type": "Buy 1 Get up to 4",
+            "url": "https://www.primebank.com.bd/ramadan-2026-b1g4-buffet-dining-offers.php",
+            "merchants": []
+        }
+    ],
+    "total_categories": 13,
+    "scraping_status": "partial – category structure only. Merchant details pending browser scrape of each .php URL above."
+}

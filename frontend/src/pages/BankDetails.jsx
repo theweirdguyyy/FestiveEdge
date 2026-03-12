@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { offerService, bankService } from '../services/api';
 import BankCard from '../components/BankCard';
 import OfferModal from '../components/OfferModal';
-import { ArrowLeft, Landmark, ShoppingBag, Loader2 } from 'lucide-react';
+import { ArrowLeft, Landmark, ShoppingBag, Loader2, Lamp, Globe } from 'lucide-react';
 
 const BankDetails = () => {
     const { id } = useParams();
@@ -23,7 +23,7 @@ const BankDetails = () => {
             setLoading(true);
             const [offersRes, bankRes] = await Promise.all([
                 offerService.getOffers(id),
-                bankService.getBank(id).catch(() => null) // Bank might not exist as a separate doc if we only have offers
+                bankService.getBank(id).catch(() => null)
             ]);
 
             setOffers(offersRes.data.data);
@@ -55,59 +55,61 @@ const BankDetails = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen pt-32 flex items-center justify-center">
-                <Loader2 className="animate-spin text-indigo-600" size={48} />
+            <div className="min-h-screen bg-[#052e16] pt-32 flex items-center justify-center">
+                <Loader2 className="animate-spin text-[#ca8a04]" size={48} />
             </div>
         );
     }
 
     return (
-        <div className="bg-white min-h-screen pt-20">
-            <div className="container mx-auto px-6">
-                <Link to="/" className="inline-flex items-center text-indigo-600 font-bold mb-8 hover:gap-2 transition-all">
-                    <ArrowLeft size={20} className="mr-2" /> Back to Home
+        <div className="bg-[#052e16] min-h-screen pt-32 text-white overflow-hidden uppercase">
+            <div className="container mx-auto px-6 relative z-10">
+                <Link to="/" className="inline-flex items-center text-[#ca8a04] font-black text-xs tracking-widest mb-12 hover:text-white transition-all group">
+                    <ArrowLeft size={18} className="mr-2 group-hover:-translate-x-1 transition-transform" /> BACK TO HOME
                 </Link>
 
-                <div className="bg-indigo-600 rounded-[3rem] p-12 md:p-20 text-white mb-16 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32" />
+                <div className="bg-[#064e3b] rounded-[3rem] p-12 md:p-20 mb-20 relative overflow-hidden border border-white/10 shadow-2xl islamic-pattern">
+                    <div className="absolute inset-0 opacity-10 pointer-events-none mosque-silhouette scale-150 rotate-12" />
+
                     <div className="relative z-10">
-                        <div className="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center mb-8">
-                            <Landmark size={40} />
+                        <div className="w-20 h-20 bg-white/10 rounded-3xl flex items-center justify-center mb-8 border border-white/20 text-[#ca8a04]">
+                            <Lamp size={40} />
                         </div>
-                        <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-                            {bank?.title || 'Bank'} <br /> Exclusive Offers
+                        <h1 className="text-5xl md:text-7xl font-black mb-6 leading-none font-outfit tracking-tighter">
+                            {bank?.title || 'Bank'} <br />
+                            <span className="text-[#ca8a04]">EXCLUSIVE</span> OFFERS
                         </h1>
-                        <p className="text-indigo-100 text-lg max-w-xl">
+                        <p className="text-gray-400 text-lg max-w-xl font-bold lowercase">
                             Discover {offers.length} active deals curated specifically for {bank?.title || 'this bank'} customers.
                         </p>
                     </div>
                 </div>
 
                 {/* Category Navigation */}
-                <div className="flex flex-wrap gap-4 mb-12">
+                <div className="flex flex-wrap gap-4 mb-16 border-b border-white/5 pb-12">
                     <button
                         onClick={() => setActiveCategory('All')}
-                        className={`px-8 py-3 rounded-2xl font-black transition-all ${activeCategory === 'All' ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'}`}
+                        className={`px-10 py-4 rounded-full font-black text-xs tracking-widest transition-all border ${activeCategory === 'All' ? 'bg-[#ca8a04] border-[#ca8a04] text-[#052e16]' : 'bg-white/5 border-white/10 text-gray-400 hover:border-[#ca8a04]'}`}
                     >
-                        All ({offers.length})
+                        ALL ({offers.length})
                     </button>
                     {categories.map(cat => (
                         <button
                             key={cat}
                             onClick={() => setActiveCategory(cat)}
-                            className={`px-8 py-3 rounded-2xl font-black transition-all ${activeCategory === cat ? 'bg-indigo-600 text-white' : 'bg-gray-100 text-gray-500 hover:bg-gray-200'}`}
+                            className={`px-10 py-4 rounded-full font-black text-xs tracking-widest transition-all border ${activeCategory === cat ? 'bg-[#ca8a04] border-[#ca8a04] text-[#052e16]' : 'bg-white/5 border-white/10 text-gray-400 hover:border-[#ca8a04]'}`}
                         >
                             {cat} ({groupedOffers[cat].length})
                         </button>
                     ))}
                 </div>
 
-                <div className="flex items-center justify-between mb-12">
-                    <h2 className="text-3xl font-black text-gray-900">
-                        {activeCategory === 'All' ? 'All Offers' : `${activeCategory} Offers`}
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-16 px-4">
+                    <h2 className="text-3xl md:text-4xl font-black font-outfit tracking-tighter">
+                        {activeCategory === 'All' ? 'ALL AVAILABLE OFFERS' : `${activeCategory} CURATIONS`}
                     </h2>
-                    <div className="text-gray-500 font-medium">
-                        Showing {Math.min(visibleCount, filteredOffers.length)} of {filteredOffers.length}
+                    <div className="text-gray-500 font-black text-[10px] tracking-widest mt-4 md:mt-0">
+                        SHOWING {Math.min(visibleCount, filteredOffers.length)} OF {filteredOffers.length}
                     </div>
                 </div>
 
@@ -127,15 +129,22 @@ const BankDetails = () => {
                 />
 
                 {visibleCount < filteredOffers.length && (
-                    <div className="pb-24 text-center">
+                    <div className="pb-32 text-center">
                         <button
                             onClick={() => setVisibleCount(prev => prev + 12)}
-                            className="bg-white border-2 border-indigo-600 text-indigo-600 px-12 py-5 rounded-2xl font-black hover:bg-indigo-600 hover:text-white transition-all shadow-xl shadow-indigo-50"
+                            className="bg-transparent border-2 border-white/10 text-white px-16 py-5 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-[#ca8a04] hover:border-[#ca8a04] hover:text-[#052e16] transition-all"
                         >
-                            Show More Offers
+                            SHOW MORE OFFERS
                         </button>
                     </div>
                 )}
+            </div>
+
+            {/* Bottom Footer Section Style */}
+            <div className="mt-16 pt-8 pb-12 border-t border-white/5 text-center">
+                <p className="text-[9px] font-bold text-gray-600 uppercase tracking-[0.3em]">
+                    © 2026 UTSOB REWARDS. YOUR FESTIVE SAVINGS PARTNER IN BANGLADESH.
+                </p>
             </div>
         </div>
     );
